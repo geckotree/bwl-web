@@ -1,0 +1,18 @@
+/* ===========================================================
+
+	# ANCHOR
+
+=========================================================== */
+
+a {
+	border-bottom: $border-width solid transparent;
+	color: $pri;
+	transition: border-color $speed ease,
+				color $speed ease;
+
+	&:hover,
+	&:focus {
+		border-color: $sec;
+		color: $sec;
+	}
+}

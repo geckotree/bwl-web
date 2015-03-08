@@ -1,0 +1,15 @@
+{
+    "name": "geckotree-boilerplate",
+    "version": "1.0.0",
+    "description": "Geckotree Front-End Boilerplate",
+    "main": "template.js",
+    "readmeFilename": "readme.md",
+    "authors": [
+        "Rob Simpson <rob@geckotree.co.uk>",
+        "Kev Simpson <kev@geckotree.co.uk>"
+    ],
+    "devDependencies": {
+        "grunt": "~0.4.5",
+        "grunt-bump": "0.0.16"
+    }
+}

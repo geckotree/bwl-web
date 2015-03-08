@@ -1,0 +1,136 @@
+/* ===========================================================
+
+	# FORMS
+
+=========================================================== */
+
+.input,
+select,
+textarea {
+	background: none;
+	border: $border-width solid $border-colour;
+	border-radius: $border-radius;
+	padding: 1rem 1.5rem;
+	resize: none;
+	transition: border $speed ease;
+	width: 100%;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+
+	&:focus {
+		border-color: $pri;
+	}
+}
+
+textarea {
+	overflow: auto; // Hide scrollbar IE
+}
+
+
+
+//= LABEL ====================================================
+
+label {
+	display: block;
+	margin-top: $line-height;
+	padding-bottom: $line-height / 2;
+
+	&:first-child {
+		padding-top: 0;
+	}
+}
+
+label[for] {
+	cursor: pointer;
+}
+
+.label__note {
+	color: $border-colour;
+	float: right;
+	font-size: .8em;
+	font-style: italic;
+}
+
+
+
+//= SELECT ===================================================
+
+.select {
+	position: relative;
+	vertical-align: middle;
+	z-index: 1;
+
+	select {
+		position: relative;
+		text-indent: .01px;
+		text-overflow: '';
+		z-index: 1;
+
+		&::-ms-expand {
+		    display: none;
+		}
+
+		.lt-ie10 & {
+			padding-right: 1rem;
+		}
+	}
+
+	&:after {
+		background: $background-colour;
+		border-radius: 0 $border-radius - $border-width $border-radius - $border-width 0;
+		box-sizing: border-box;
+		color: $border-colour;
+		content: '\25BE';
+		display: block;
+		height: calc( 100% - .2rem );
+		padding: 1rem 1.5rem;
+		position: absolute;
+		pointer-events: none;
+		right: $border-width;
+		top: $border-width;
+		z-index: 0;
+
+		.lt-ie10 & {
+			display: none;
+		}
+	}
+}
+
+// FireFox 30 hide native down arrow
+:-moz-any( .select ):after {
+	z-index: 1;
+}
+
+
+
+//= BUTTON ===================================================
+
+.input + .button,
+.select + .button,
+textarea + .button {
+	margin-top: $line-height * 2;
+}
+
+
+
+//= PLACEHOLDER ==============================================
+
+::-webkit-input-placeholder {
+   color: $border-colour;
+}
+
+:-moz-placeholder { // Firefox 18-
+   color: $border-colour;
+}
+
+::-moz-placeholder {  // Firefox 19+
+   color: $border-colour;
+}
+
+:-ms-input-placeholder {
+   color: $border-colour;
+}

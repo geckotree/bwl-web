@@ -1,0 +1,66 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+
+    var homePage = CurrentPage.AncestorsOrSelf(1).First();
+	var pageType = "doc--" + CurrentPage.DocumentTypeAlias.ToLower().Replace(" ", "-");
+	
+	var siteUrl = "http://" +  Request.Url.Host.ToString();
+	var pageUrl = siteUrl + CurrentPage.Url;
+}
+<!doctype html>
+<html lang="en" class="no-js @pageType">
+<head>
+	<meta charset="utf-8">
+
+	<title>meta.Title</title>
+	<meta name="description" content="meta.Description">
+	<meta name="keywords" content="meta.Keywords" />
+	<meta name="robots" content="index, follow" />
+
+	<!-- VIEWPORT -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	
+	<!-- WEBFONT -->
+	
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="/assets/js/html5shiv.min.js"></script>
+		<link rel="stylesheet" href="/assets/css/style-ie.min.css" />
+	<![endif]-->
+
+	<!--[if gt IE 8]><!-->
+		<link rel="stylesheet" href="/assets/css/style.min.css" />
+	<!--<![endif]-->
+		
+	<!-- HEAD SCRIPTS -->
+	<script type="text/javascript" src="/assets/js/head-script.min.js"></script>
+
+	<!-- FAVICONS -->
+	<link rel="shortcut icon" href="/assets/img/favicon.png">
+
+	<!-- OPEN GRAPH - http://ogp.me -->
+	<meta property="og:title" content="meta.Title" />
+	<meta property="og:description" content="meta.Description" />
+	<meta property="og:url" content="@pageUrl" />
+	<meta property="og:image" content="#" />
+	<meta property="og:type" content="company" />
+	
+	<!-- TWITTER CARD - https://dev.twitter.com/docs/cards/markup-reference -->
+	<meta name="twitter:title" content="meta.Title" />
+	<meta name="twitter:description" content="meta.Description" />
+	<meta name="twitter:url" content="@pageUrl" />
+	<meta name="twitter:image" content="#" />
+	<meta name="twitter:creator" value="geckotree" />
+</head>
+<body class="page">
+	@Html.Partial("page/header")
+	<main id="main" class="page__content clearfix" role="main">
+		@RenderBody()
+	</main>
+	@Html.Partial("page/footer")
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/js/script.min.js"></script>
+
+	@RenderSection("pageScripts", false)
+</body>
+</html>

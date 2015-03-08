@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "Master.cshtml";
+
+    var selection = CurrentPage.Children().Where("Visible");
+}
+
+@if( selection.Any() ) {
+
+	foreach( var item in selection ) {
+		<p>@item.Name</p>
+	}
+
+} else {
+	<p>Oops, there aren't any recipes</p>
+}

@@ -1,0 +1,84 @@
+/* ===========================================================
+
+	# MEDIA
+
+=========================================================== */
+
+img {
+  	max-width: 100%;
+  	vertical-align: top;
+}
+
+.media {
+	img {
+		border-radius: $border-radius;
+		width: 100%;
+	}
+}
+
+.media--video {
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 56.25%;
+	}
+
+	iframe,
+	object,
+	embed {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
+.media--large {
+	margin: $padding--small 0;
+	position: relative;
+}
+
+@include respond-min( $mq-medium ) {
+
+	.media--large {
+		margin: $padding--medium 0;
+	}
+
+	.media--left,
+	.media--right {
+		margin-bottom: $line-height;
+		width: 40%;
+	}
+
+	.media--left {
+		float: left;
+		margin-right: $line-height;
+	}
+
+	.media--right {
+		float: right;
+		margin-left: $line-height;
+	}
+
+}
+
+@include respond-min( $mq-large ) {
+
+	.media--large {
+		margin-left: -7.5%;
+		width: 115%;
+	}
+
+}
+
+@include respond-min( $mq-x-large ) {
+
+	.media--large {
+		margin-left: -15%;
+		width: 130%;
+	}
+
+}

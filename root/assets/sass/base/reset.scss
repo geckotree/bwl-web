@@ -1,0 +1,102 @@
+/* ===========================================================
+
+  # RESET
+
+=========================================================== */
+
+// http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@-ms-viewport {
+	width: device-width;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strike, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+	border: none;
+	font: inherit;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	vertical-align: baseline;
+}
+
+// HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+* {
+	box-sizing: border-box;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.no-mustard * {
+	transition: none!important;
+}
+
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+
+
+/* ===========================================================
+
+  # JS access to breakpoints:
+  https://github.com/JoshBarr/js-media-queries
+
+=========================================================== */
+
+@include respond-min( $mq-small ) {
+
+	html {
+		font-family: 'small';
+	}
+
+}
+
+@include respond-min( $mq-medium ) {
+
+	html {
+		font-family: 'medium';
+	}
+
+}
+
+@include respond-min( $mq-large ) {
+
+	html {
+		font-family: 'large';
+	}
+
+}
+
+@include respond-min( $mq-x-large ) {
+
+	html {
+		font-family: 'x-large';
+	}
+
+}
+
+@include respond-min( $mq-xx-large ) {
+
+	html {
+		font-family: 'xx-large';
+	}
+
+}

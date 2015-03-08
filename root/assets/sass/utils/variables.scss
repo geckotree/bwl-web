@@ -1,0 +1,115 @@
+/* ===========================================================
+
+	# VARIABLES
+
+=========================================================== */
+
+$old-ie: false!default;
+
+
+
+/* ===========================================================
+
+	# COLOURS
+
+=========================================================== */
+
+$pri: #57B275;
+$sec: #F05D71;
+$ter: #F2D044;
+
+
+
+/* ===========================================================
+
+	# BASE VALUES
+
+=========================================================== */
+
+$font-size--small:		2rem;
+$font-size--large:		2.2rem;
+$line-height:			1.4em;
+$type-scale--small:		1.100;
+$type-scale--medium:	1.150;
+$type-scale--large:		1.200;
+
+$text-colour:			#000;
+$background-colour:		#fff;
+$border-colour:			#ccc;
+$highlight-colour:		lighten( $pri, 20 );
+
+$padding--small:		4rem;
+$padding--medium:		6rem;
+$padding--large:		8rem;
+
+$border-width: 			.1rem;
+$border-radius: 		.4rem;
+$speed: 		.3s;
+
+
+
+/* ===========================================================
+
+	# GRID SETTINGS
+
+=========================================================== */
+
+$jeet-gutter:           3      			!default;
+$jeet-parent-first:     false  			!default;
+$jeet-layout-direction: "LTR"  			!default;
+$jeet-max-width:        1410px 			!default;
+
+
+
+/* ===========================================================
+
+	# MEDIA QUERIES
+
+=========================================================== */
+
+$mq-small: 				37.5em; 		// 600px
+$mq-medium: 			50em; 			// 800px
+$mq-large: 				62.5em; 		// 1000px
+$mq-x-large: 			80em; 			// 1280px
+$mq-xx-large: 			93.75em; 		// 1500px
+
+
+
+/* ===========================================================
+
+	# HEADING SIZES
+
+=========================================================== */
+
+$zeta--small: 		$font-size--small;
+$epsilon--small: 	$zeta--small		*	$type-scale--small;
+$delta--small: 		$epsilon--small		*	$type-scale--small;
+$gamma--small: 		$delta--small		*	$type-scale--small;
+$beta--small: 		$gamma--small		*	$type-scale--small;
+$alpha--small: 		$beta--small		*	$type-scale--small;
+$mega--small:		$alpha--small		*	$type-scale--small;
+$giga--small:		$mega--small		*	$type-scale--small;
+$tera--small: 		$giga--small		*	$type-scale--small;
+$intro--small: 		$delta--small;
+
+$zeta--medium: 		$font-size--large;
+$epsilon--medium: 	$zeta--medium		*	$type-scale--medium;
+$delta--medium: 	$epsilon--medium	*	$type-scale--medium;
+$gamma--medium: 	$delta--medium		*	$type-scale--medium;
+$beta--medium: 		$gamma--medium		*	$type-scale--medium;
+$alpha--medium: 	$beta--medium		*	$type-scale--medium;
+$mega--medium:		$alpha--medium		*	$type-scale--medium;
+$giga--medium:		$mega--medium		*	$type-scale--medium;
+$tera--medium: 		$giga--medium		*	$type-scale--medium;
+$intro--medium: 	$delta--medium;
+
+$zeta--large: 		$font-size--large;
+$epsilon--large: 	$zeta--large		*	$type-scale--large;
+$delta--large: 		$epsilon--large		*	$type-scale--large;
+$gamma--large: 		$delta--large		*	$type-scale--large;
+$beta--large: 		$gamma--large		*	$type-scale--large;
+$alpha--large: 		$beta--large		*	$type-scale--large;
+$mega--large:		$alpha--large		*	$type-scale--large;
+$giga--large:		$mega--large		*	$type-scale--large;
+$tera--large: 		$giga--large		*	$type-scale--large;
+$intro--large: 		$delta--large;

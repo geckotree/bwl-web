@@ -1,0 +1,15 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var homePage = CurrentPage.Site();
+	var selection = homePage.Children.Where("UmbracoNaviHide == false");
+}
+
+<nav id="mainNav" class="nav nav--main" role="navigation">
+	<ul class="nav__list clearfix">
+		@foreach (var item in selection) {
+			<li class="nav__item nav__item--parent">
+				<a href="@item.Url" class='nav__link @(item.IsAncestorOrSelf(CurrentPage) ? "active" : null)'>@item.Name</a>
+			</li>
+		}
+	</ul>
+</nav>
