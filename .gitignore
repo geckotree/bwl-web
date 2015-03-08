@@ -14,6 +14,7 @@ humans.txt
 **/App_Data/Logs/
 **/App_Data/[Pp]review/
 **/App_Data/TEMP/
+**/App_Data/Cache/
 Cached/
 
 # Ignore Umbraco content cache file

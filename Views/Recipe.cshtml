@@ -2,3 +2,9 @@
 @{
     Layout = "Master.cshtml";
 }
+
+@if( CurrentPage.HasValue("coverImage") ) {
+	var image = Umbraco.Media(CurrentPage.coverImage);
+
+	<img src="@image.GetCropUrl("cover")" alt="@CurrentPage.Name" class="listing__image" />
+}

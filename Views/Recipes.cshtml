@@ -6,10 +6,24 @@
 }
 
 @if( selection.Any() ) {
+	<div class="listing listing--grid wrap section">
 
-	foreach( var item in selection ) {
-		<p>@item.Name</p>
-	}
+		@foreach( var item in selection ) {
+
+			<a href="@item.Url" class="listing__link">
+				<article class="listing__item">
+					@if( item.HasValue("coverImage") ) {
+						var image = Umbraco.Media(item.coverImage);
+
+						<img src="@image.GetCropUrl("small")" alt="@item.Name" class="listing__image" />
+					} else {
+						<img src="/assets/img/fallback-thumb.jpg?width=400&height=300&mode=crop" alt="@item.Name" class="listing__image" />
+					}
+					<h2 class="zeta">@item.Name</h2>
+				</article>
+			</a>
+		}
+	</div>
 
 } else {
 	<p>Oops, there aren't any recipes</p>
